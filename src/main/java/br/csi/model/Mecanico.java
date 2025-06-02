@@ -1,22 +1,29 @@
 package br.csi.model;
 
 public class Mecanico extends Usuario {
-    private String especialidade; // Ex: "Motor", "Elétrica"
+    private int idMecanico;
 
-    // Construtores
-    public Mecanico() {}
-
-    public Mecanico(int id, String nome, String email, String senha, boolean ativo, String especialidade) {
-        super(id, nome, email, senha, ativo, "MECANICO");
-        this.especialidade = especialidade;
+    public Mecanico() {
+        super();
+        this.setTipo("MECANICO");
     }
 
-    // Getters e Setters
-    public String getEspecialidade() {
-        return especialidade;
+    public Mecanico(int idUsuario, String nome, String email, String senha, boolean ativo, int idMecanico) {
+        super(idUsuario, nome, email, senha, "MECANICO", ativo);
+        this.idMecanico = idMecanico;
     }
 
-    public void setEspecialidade(String especialidade) {
-        this.especialidade = especialidade;
+
+    public Mecanico(String nome, String email, String senha) {
+        super(0, nome, email, senha, "MECANICO", true);
+    }
+
+
+    public int getIdMecanico() {
+        return idMecanico;
+    }
+
+    public void setIdMecanico(int idMecanico) {
+        this.idMecanico = idMecanico;
     }
 }

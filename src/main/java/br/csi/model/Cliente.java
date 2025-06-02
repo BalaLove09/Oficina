@@ -1,40 +1,24 @@
 package br.csi.model;
 
 public class Cliente extends Usuario {
-    private String cpf;
-    private String telefone;
-    private String endereco;
+    private int idCliente;
 
-    // Construtores
     public Cliente() {}
 
-    public Cliente(int id, String nome, String email, String senha, boolean ativo, String cpf) {
-        super(id, nome, email, senha, ativo, "CLIENTE");
-        this.cpf = cpf;
+    public Cliente(int idUsuario, String nome, String email, String senha, boolean ativo, int idCliente) {
+        super(idUsuario, nome, email, senha, "CLIENTE", ativo);
+        this.idCliente = idCliente;
     }
 
-    // Getters e Setters
-    public String getCpf() {
-        return cpf;
+    public Cliente(String nome, String email, String senha) {
+        super(0, nome, email, senha, "CLIENTE", true);
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 }

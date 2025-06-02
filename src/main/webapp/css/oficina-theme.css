@@ -1,0 +1,144 @@
+/* Variáveis CSS para facilitar a personalização */
+:root {
+    --oficina-dark-blue: #2c3e50;
+    --oficina-gray-dark: #34495e;
+    --oficina-gray-medium: #6c7a89;
+    --oficina-orange: #e67e22;
+    --oficina-red: #c0392b;
+    --oficina-light-bg: #ecf0f1;
+    --oficina-text-dark: #2c3e50;
+    --oficina-border-color: #bdc3c7;
+    --oficina-white: #ffffff; /* Variável para branco */
+}
+
+/* Base do Corpo */
+body {
+    background-color: var(--oficina-light-bg);
+    font-family: 'Arial', sans-serif;
+    color: var(--oficina-text-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--oficina-dark-blue);
+    font-weight: bold;
+}
+
+/* Cards (Caixas de conteúdo) */
+.card {
+    border: 1px solid var(--oficina-border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--oficina-gray-dark); /* Fundo escuro */
+    color: white; /* Texto padrão do cabeçalho já é branco */
+    font-weight: bold;
+    border-bottom: 1px solid var(--oficina-dark-blue);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* NOVA CLASSE PARA CABEÇALHOS BRANCOS */
+.card-header-light {
+    background-color: var(--oficina-white); /* Fundo branco */
+    color: var(--oficina-text-dark); /* Texto escuro para ser legível no branco */
+    border-bottom: 1px solid var(--oficina-border-color); /* Borda mais clara */
+}
+
+/* Botões Customizados */
+.btn-primary {
+    background-color: var(--oficina-orange);
+    border-color: var(--oficina-orange);
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d35400;
+    border-color: #d35400;
+}
+
+.btn-secondary {
+    background-color: var(--oficina-gray-medium);
+    border-color: var(--oficina-gray-medium);
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6b7d;
+    border-color: #5a6b7d;
+}
+
+.btn-danger {
+    background-color: var(--oficina-red);
+    border-color: var(--oficina-red);
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #a92d20;
+    border-color: #a92d20;
+}
+
+/* Inputs de Formulário */
+.form-control, .form-select {
+    border: 1px solid var(--oficina-border-color);
+    background-color: #ffffff;
+    color: var(--oficina-text-dark);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--oficina-orange);
+    box-shadow: 0 0 0 0.25rem rgba(230, 126, 34, 0.25);
+}
+
+/* Tabelas */
+.table {
+    border-color: var(--oficina-border-color);
+}
+
+.table thead th {
+    background-color: var(--oficina-gray-dark);
+    color: white;
+    border-color: var(--oficina-dark-blue);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Mensagens de Alerta */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* Estilos específicos para a página de login/cadastro (centralizado) */
+.login-container, .cadastro-container {
+    background-color: var(--oficina-white); /* Usar a variável de branco */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.card-header h5 {
+    color: var(--oficina-white); /* Define a cor do texto do h5 para branco */
+}

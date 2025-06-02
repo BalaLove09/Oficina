@@ -7,7 +7,9 @@
     <meta charset="UTF-8">
     <title>Login - Oficina Mecânica</title>
     <!-- Bootstrap CSS (opcional) -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/oficina-theme.css" rel="stylesheet">
     <style>
         body {
             background-color: #f8f9fa;
@@ -51,7 +53,7 @@
 
         <!-- Link para cadastro (opcional) -->
         <div class="mt-3 text-center">
-            <p>Não tem uma conta? <a href="${pageContext.request.contextPath}/cadastro">Cadastre-se</a></p>
+            <p>Não tem uma conta? <a href="${pageContext.request.contextPath}/cadastro.jsp">Cadastre-se</a></p>
         </div>
     </div>
 </div>

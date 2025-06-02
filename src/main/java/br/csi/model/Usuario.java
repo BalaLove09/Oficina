@@ -1,32 +1,41 @@
 package br.csi.model;
 
 public class Usuario {
-    private int id_usuario;
+    private int idUsuario;
     private String nome;
     private String email;
     private String senha;
+    private String tipo;
     private boolean ativo;
-    private String tipo; // "CLIENTE" ou "MECANICO"
 
-    // Construtores
-    public Usuario() {}
-
-    public Usuario(int id, String nome, String email, String senha, boolean ativo, String tipo) {
-        this.id_usuario = id_usuario;
+    // Construtor
+    public Usuario(int idUsuario, String nome, String email, String senha, String tipo, boolean ativo) {
+        this.idUsuario = idUsuario;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-        this.ativo = ativo;
         this.tipo = tipo;
+        this.ativo = ativo;
     }
 
-    // Getters e Setters (mantendo seu padrão)
-    public int getId() {
-        return id_usuario;
+    public Usuario(String nome, String email, String senha, String tipo) {
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.tipo = tipo;
+        this.ativo = true;
     }
 
-    public void setId(int id_usuario) {
-        this.id_usuario = id_usuario;
+
+    public Usuario() {
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNome() {
@@ -53,19 +62,19 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public boolean isAtivo() {
-        return ativo;
-    }
-
-    public void setAtivo(boolean ativo) {
-        this.ativo = ativo;
-    }
-
     public String getTipo() {
         return tipo;
     }
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
     }
 }
