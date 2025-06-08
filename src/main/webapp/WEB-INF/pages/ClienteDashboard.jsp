@@ -28,7 +28,6 @@
         <a href="${pageContext.request.contextPath}/login?acao=logout" class="btn btn-danger">Sair</a>
     </div>
 
-    <%-- Exibição de Mensagens de Sucesso/Erro --%>
     <c:if test="${not empty mensagemSucesso}">
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             <c:out value="${mensagemSucesso}"/>
@@ -100,7 +99,6 @@
                                                 <c:out value="${veiculo.placa}"/>
                                             </td>
                                             <td>
-                                                    <%-- Links de Edição e Exclusão --%>
                                                 <a href="${pageContext.request.contextPath}/veiculo?opcao=editar&info=${veiculo.id}"
                                                    class="btn btn-sm btn-outline-primary">Editar</a>
                                                 <a href="${pageContext.request.contextPath}/veiculo?opcao=excluir&info=${veiculo.id}"
