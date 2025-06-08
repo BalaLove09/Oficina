@@ -43,7 +43,6 @@ public class VeiculoServlet extends HttpServlet {
 
             Veiculo veiculo = new Veiculo(idCliente, marca, modelo, placa);
 
-            // Agora o método inserir do VeiculoService retorna String
             retornoMensagem = veiculoService.inserir(veiculo);
             session.setAttribute("mensagemSucesso", retornoMensagem);
 
@@ -55,7 +54,6 @@ public class VeiculoServlet extends HttpServlet {
 
             Veiculo veiculo = new Veiculo(idVeiculo, idCliente, marca, modelo, placa);
 
-            // Agora o método alterar do VeiculoService retorna String
             retornoMensagem = veiculoService.alterar(veiculo);
             session.setAttribute("mensagemSucesso", retornoMensagem);
         }
@@ -113,8 +111,7 @@ public class VeiculoServlet extends HttpServlet {
             }
         }
 
-        // Se nenhuma opção específica foi solicitada (ou após uma exclusão/redirecionamento), lista os veículos
-        List<Veiculo> veiculos = veiculoService.getVeiculosByClienteId(idCliente); // Alterado para veiculoService.getVeiculosByClienteId
+        List<Veiculo> veiculos = veiculoService.getVeiculosByClienteId(idCliente); 
         req.setAttribute("veiculos", veiculos);
 
         RequestDispatcher rd = req.getRequestDispatcher("WEB-INF/pages/ClienteDashboard.jsp");
