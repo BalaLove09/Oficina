@@ -13,7 +13,6 @@
 <div class="container mt-5">
   <h1 class="mb-4">Cadastro de Usuário</h1>
 
-  <%-- AÇÃO DO FORMULÁRIO: APONTA PARA /cadastro --%>
   <form method="post" action="${pageContext.request.contextPath}/cadastro" class="row g-3">
 
     <div class="col-12">
@@ -42,7 +41,6 @@
 
   </form>
 
-  <%-- Mensagens de erro/sucesso vindas do Servlet --%>
   <c:if test="${not empty mensagemErro}">
     <p class="mt-3 text-danger"><c:out value="${mensagemErro}"/></p>
   </c:if>
