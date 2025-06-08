@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 
         if (email.isEmpty() || senha.isEmpty()) {
             request.setAttribute("erro", "E-mail e senha são obrigatórios!");
-            request.getRequestDispatcher("login.jsp").forward(request, response); // Mudei para login.jsp se essa for sua página principal de login
+            request.getRequestDispatcher("login.jsp").forward(request, response); 
             return;
         }
 
